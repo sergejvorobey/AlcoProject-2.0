@@ -16,9 +16,6 @@ class DrinksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
     }
 }
 
@@ -43,7 +40,6 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
     
     /*
     we say that when you click on the cell on which controller the information
