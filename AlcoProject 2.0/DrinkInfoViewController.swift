@@ -23,7 +23,7 @@ class DrinkInfoViewController: UIViewController {
         nameLabel.text = drinkInfo?.name
         alcoholLevelLebel.text = drinkInfo?.alcoholLevel
         detailsLabel.text = drinkInfo?.details
-        imageAlcohol.image = UIImage(named: (drinkInfo?.name)!)
+        imageAlcohol.image = UIImage(named: (drinkInfo?.image)!)
 
     }
 }

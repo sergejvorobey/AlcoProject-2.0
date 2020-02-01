@@ -12,11 +12,14 @@ class DrinksViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let drinks = DrinkProvider().drinks
+    let provider = DrinkProvider()
+    lazy var drinks = provider.drinks
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
 }
 
 // MARK: table view delegete, table view data source
