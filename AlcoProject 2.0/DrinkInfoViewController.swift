@@ -20,10 +20,11 @@ class DrinkInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = drinkInfo?.name
-        alcoholLevelLebel.text = drinkInfo?.alcoholLevel
-        detailsLabel.text = drinkInfo?.details
-        imageAlcohol.image = UIImage(named: (drinkInfo?.image)!)
-
+         if let drink = drinkInfo {
+                   nameLabel.text = drink.name
+                   alcoholLevelLebel.text = drink.alcoholLevel
+                   detailsLabel.text = drink.details
+                   imageAlcohol.image = UIImage(named: drink.image)
+        }
     }
 }

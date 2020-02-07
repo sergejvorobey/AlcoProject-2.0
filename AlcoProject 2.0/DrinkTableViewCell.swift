@@ -13,5 +13,4 @@ class DrinkTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var alcoholLevelLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
-    
 }

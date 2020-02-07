@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87BF1B4223EB9A630031E56E /* PromoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF1B4023EB9A630031E56E /* PromoTableViewCell.swift */; };
+		87BF1B4523ECA9C20031E56E /* OpenSIteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BF1B4423ECA9C20031E56E /* OpenSIteViewController.swift */; };
 		87F4D42723DF1F8500A2076E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F4D42623DF1F8500A2076E /* AppDelegate.swift */; };
 		87F4D42923DF1F8500A2076E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F4D42823DF1F8500A2076E /* SceneDelegate.swift */; };
 		87F4D42B23DF1F8500A2076E /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F4D42A23DF1F8500A2076E /* DrinksViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87BF1B4023EB9A630031E56E /* PromoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTableViewCell.swift; sourceTree = "<group>"; };
+		87BF1B4423ECA9C20031E56E /* OpenSIteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSIteViewController.swift; sourceTree = "<group>"; };
 		87F4D42323DF1F8500A2076E /* AlcoProject 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AlcoProject 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87F4D42623DF1F8500A2076E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87F4D42823DF1F8500A2076E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,8 +69,10 @@
 				87F4D42623DF1F8500A2076E /* AppDelegate.swift */,
 				87F4D42823DF1F8500A2076E /* SceneDelegate.swift */,
 				87F4D42A23DF1F8500A2076E /* DrinksViewController.swift */,
-				87F4D43A23DF257200A2076E /* DrinkTableViewCell.swift */,
 				87F4D46023DFB99900A2076E /* DrinkInfoViewController.swift */,
+				87BF1B4423ECA9C20031E56E /* OpenSIteViewController.swift */,
+				87F4D43A23DF257200A2076E /* DrinkTableViewCell.swift */,
+				87BF1B4023EB9A630031E56E /* PromoTableViewCell.swift */,
 				87F4D43C23DF288900A2076E /* ModelAlcohol.swift */,
 				87F4D42C23DF1F8500A2076E /* Main.storyboard */,
 				87F4D42F23DF1F8600A2076E /* Assets.xcassets */,
@@ -150,7 +156,9 @@
 				87F4D43D23DF288900A2076E /* ModelAlcohol.swift in Sources */,
 				87F4D42B23DF1F8500A2076E /* DrinksViewController.swift in Sources */,
 				87F4D42723DF1F8500A2076E /* AppDelegate.swift in Sources */,
+				87BF1B4223EB9A630031E56E /* PromoTableViewCell.swift in Sources */,
 				87F4D46123DFB99900A2076E /* DrinkInfoViewController.swift in Sources */,
+				87BF1B4523ECA9C20031E56E /* OpenSIteViewController.swift in Sources */,
 				87F4D43B23DF257200A2076E /* DrinkTableViewCell.swift in Sources */,
 				87F4D42923DF1F8500A2076E /* SceneDelegate.swift in Sources */,
 			);
