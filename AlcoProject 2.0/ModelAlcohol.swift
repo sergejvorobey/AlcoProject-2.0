@@ -23,13 +23,12 @@ struct Drink {
 struct DrinkProvider {
     
     var drinks: [Drink] {
-        return [whiski, vodka, promoCell, cognac, rum, absent, teqila,whiski,vodka]
+        return [whiski, vodka, cognac]
     }
     
     var promo: PromoDrink {
         return promoImage
     }
-
 }
 
 struct PromoDrink {
@@ -58,5 +57,5 @@ private let rum = Drink(name: "Rum", details: "12345", alcoholLevel: "40", image
 private let absent = Drink(name: "Absent", details: "12345", alcoholLevel: "40", image: "")
 private let teqila = Drink(name: "Teqila", details: "12345", alcoholLevel: "40", image: "")
 // доработать / добавил ячейку которая будет занимать место рекламы
-private let promoCell = Drink(name: "", details: "", alcoholLevel: "", image: "")
+//private let promoCell = Drink(name: "", details: "", alcoholLevel: "", image: "")
 

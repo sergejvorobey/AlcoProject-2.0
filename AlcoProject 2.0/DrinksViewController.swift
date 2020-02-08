@@ -30,7 +30,7 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     //define count cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // когда добавляю ячейку drinks.count + 1 - падает приложение (Index out of range)
-        return drinks.count 
+        return drinks.count + 1
     }
     
     //set the cell identifier and which controller it belongs to
@@ -52,10 +52,21 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
 
             let defaultCell = tableView.dequeueReusableCell(withIdentifier: "DrinkTableViewCell", for: indexPath) as! DrinkTableViewCell
 
-            let drink = drinks[indexPath.row]
-            defaultCell.nameLabel.text = drink.name
-            defaultCell.detailsLabel.text = drink.details
-            defaultCell.alcoholLevelLabel.text = drink.alcoholLevel
+            var index = indexPath.row
+            
+            if indexPath.row > 1 {
+               index = indexPath.row - 1
+                
+               defaultCell.nameLabel.text = drinks[index].name
+               defaultCell.detailsLabel.text = drinks[index].details
+               defaultCell.alcoholLevelLabel.text = drinks[index].alcoholLevel
+                
+            } else {
+               
+               defaultCell.nameLabel.text = drinks[index].name
+               defaultCell.detailsLabel.text = drinks[index].details
+               defaultCell.alcoholLevelLabel.text = drinks[index].alcoholLevel
+            }
 
             return defaultCell
         }
@@ -82,7 +93,16 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
             let DrinksViewController = storyboard?.instantiateViewController(withIdentifier: "DrinkInfoViewController") as! DrinkInfoViewController
 
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                DrinksViewController.drinkInfo = drinks[selectedIndexPath.row]
+                
+                var selected = selectedIndexPath.row
+                
+                if selectedIndexPath.row > 1 {
+                    selected = selectedIndexPath.row - 1
+                    
+                    DrinksViewController.drinkInfo = drinks[selected]
+                } else {
+                    DrinksViewController.drinkInfo = drinks[selected]
+                }
             }
             
             self.navigationController?.pushViewController(DrinksViewController, animated: true)
