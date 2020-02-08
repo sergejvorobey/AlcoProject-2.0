@@ -30,7 +30,7 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     //define count cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // когда добавляю ячейку drinks.count + 1 - падает приложение (Index out of range)
-        return drinks.count
+        return drinks.count 
     }
     
     //set the cell identifier and which controller it belongs to
@@ -38,7 +38,7 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
 
-        case _ where indexPath.row == 2:
+        case 2:
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "PromoTableViewCell", for: indexPath) as! PromoTableViewCell
 
@@ -63,10 +63,8 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: navigation
     
-    /*
-    we say that when you click on the cell on which controller the information
-    will be displayed and on which segue  indicator
-     */
+//  go by cell indexPath.row to controllers with Identifier
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 2 {
@@ -85,9 +83,8 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
 
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 DrinksViewController.drinkInfo = drinks[selectedIndexPath.row]
-                
-                print(selectedIndexPath.row)
             }
+            
             self.navigationController?.pushViewController(DrinksViewController, animated: true)
             tableView.deselectRow(at: indexPath, animated: true)
         }
