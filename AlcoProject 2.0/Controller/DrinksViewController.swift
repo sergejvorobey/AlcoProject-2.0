@@ -26,6 +26,8 @@ class DrinksViewController: UIViewController {
         drinks = alcoholDrinks + nonAlcoholDrinks
         
         tableView.tableFooterView = UIView()
+        tableView.backgroundColor = .lightGray
+        
     }
 }
 
@@ -53,6 +55,9 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
             let image = drinksProvider.promo.promoImage
 
             cell.imageDrinkPromo.image = image
+            cell.layer.cornerRadius = 13
+            cell.layer.borderWidth = 6.5
+            cell.layer.borderColor = UIColor.lightGray.cgColor
 
             return cell
 
@@ -75,6 +80,11 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
                 defaultCell.detailsLabel.text = drinks[index].details
                 defaultCell.alcoholLevelLabel.text = drinks[index].alcoholLevel
             }
+            
+            defaultCell.layer.cornerRadius = 13
+            defaultCell.tintColor = .white
+            defaultCell.layer.borderWidth = 6.5
+            defaultCell.layer.borderColor = UIColor.lightGray.cgColor
             
             return defaultCell
         }
