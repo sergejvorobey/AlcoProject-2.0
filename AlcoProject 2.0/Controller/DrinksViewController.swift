@@ -83,7 +83,6 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: navigation
     
 //  go by cell indexPath.row to controllers with Identifier
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 2 {
