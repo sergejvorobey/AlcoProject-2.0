@@ -68,18 +68,42 @@
 			children = (
 				87F4D42623DF1F8500A2076E /* AppDelegate.swift */,
 				87F4D42823DF1F8500A2076E /* SceneDelegate.swift */,
-				87F4D42A23DF1F8500A2076E /* DrinksViewController.swift */,
-				87F4D46023DFB99900A2076E /* DrinkInfoViewController.swift */,
-				87BF1B4423ECA9C20031E56E /* OpenSIteViewController.swift */,
-				87F4D43A23DF257200A2076E /* DrinkTableViewCell.swift */,
-				87BF1B4023EB9A630031E56E /* PromoTableViewCell.swift */,
-				87F4D43C23DF288900A2076E /* ModelAlcohol.swift */,
+				87F68A7123F2F15000D4C454 /* Controller */,
+				87F68A7223F2F18A00D4C454 /* View */,
+				87F68A7323F2F24E00D4C454 /* Model */,
 				87F4D42C23DF1F8500A2076E /* Main.storyboard */,
 				87F4D42F23DF1F8600A2076E /* Assets.xcassets */,
 				87F4D43123DF1F8600A2076E /* LaunchScreen.storyboard */,
 				87F4D43423DF1F8600A2076E /* Info.plist */,
 			);
 			path = "AlcoProject 2.0";
+			sourceTree = "<group>";
+		};
+		87F68A7123F2F15000D4C454 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87F4D42A23DF1F8500A2076E /* DrinksViewController.swift */,
+				87F4D46023DFB99900A2076E /* DrinkInfoViewController.swift */,
+				87BF1B4423ECA9C20031E56E /* OpenSIteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		87F68A7223F2F18A00D4C454 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87F4D43A23DF257200A2076E /* DrinkTableViewCell.swift */,
+				87BF1B4023EB9A630031E56E /* PromoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		87F68A7323F2F24E00D4C454 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87F4D43C23DF288900A2076E /* ModelAlcohol.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

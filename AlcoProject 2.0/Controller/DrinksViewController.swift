@@ -12,34 +12,42 @@ class DrinksViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var drinks:[Drink] = []
+    private var alcoholDrinks: [AlcoholDrink] = []
+    private var nonAlcoholDrinks: [NonAlcoholDrink] = []
+    private var drinks: [Drink] = []
     private let drinksProvider: DrinkProvider = DrinkProvider()
     private var promoDrink: PromoDrink?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        drinks = drinksProvider.drinks
+        alcoholDrinks = drinksProvider.alcoholDrinks
+        nonAlcoholDrinks = drinksProvider.nonAlcoholDrinks
+        drinks = alcoholDrinks + nonAlcoholDrinks
+        
+        tableView.tableFooterView = UIView()
     }
 }
 
 // MARK: table view delegete, table view data source
 
 extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
-   
+    
     //define count cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // когда добавляю ячейку drinks.count + 1 - падает приложение (Index out of range)
-        return drinks.count + 1
+        
+       let allCountCell = alcoholDrinks.count + nonAlcoholDrinks.count
+
+        return  allCountCell + 1
     }
     
     //set the cell identifier and which controller it belongs to
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+       
         switch indexPath.row {
 
         case 2:
-            
+
             let cell = tableView.dequeueReusableCell(withIdentifier: "PromoTableViewCell", for: indexPath) as! PromoTableViewCell
 
             let image = drinksProvider.promo.promoImage
@@ -47,7 +55,7 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
             cell.imageDrinkPromo.image = image
 
             return cell
-            
+
         default:
 
             let defaultCell = tableView.dequeueReusableCell(withIdentifier: "DrinkTableViewCell", for: indexPath) as! DrinkTableViewCell
@@ -55,19 +63,19 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
             var index = indexPath.row
             
             if indexPath.row > 1 {
-               index = indexPath.row - 1
+                index = indexPath.row - 1
                 
-               defaultCell.nameLabel.text = drinks[index].name
-               defaultCell.detailsLabel.text = drinks[index].details
-               defaultCell.alcoholLevelLabel.text = drinks[index].alcoholLevel
-                
-            } else {
-               
-               defaultCell.nameLabel.text = drinks[index].name
-               defaultCell.detailsLabel.text = drinks[index].details
-               defaultCell.alcoholLevelLabel.text = drinks[index].alcoholLevel
-            }
+                defaultCell.nameLabel.text = drinks[index].name
+                defaultCell.detailsLabel.text =  drinks[index].details
+                defaultCell.alcoholLevelLabel.text = drinks[index].alcoholLevel
 
+            } else {
+                
+                defaultCell.nameLabel.text = drinks[index].name
+                defaultCell.detailsLabel.text = drinks[index].details
+                defaultCell.alcoholLevelLabel.text = drinks[index].alcoholLevel
+            }
+            
             return defaultCell
         }
     }
@@ -98,9 +106,11 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 if selectedIndexPath.row > 1 {
                     selected = selectedIndexPath.row - 1
-                    
+
                     DrinksViewController.drinkInfo = drinks[selected]
+
                 } else {
+                    
                     DrinksViewController.drinkInfo = drinks[selected]
                 }
             }

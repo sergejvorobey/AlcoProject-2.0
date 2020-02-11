@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Whiski.jpg",
+      "filename" : "Sprite.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Whiski@2x.jpg",
+      "filename" : "Sprite@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Whiski@3x.jpg",
+      "filename" : "Sprite@3x.jpg",
       "scale" : "3x"
     }
   ],
